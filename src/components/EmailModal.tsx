@@ -2,12 +2,12 @@
 
 type Props = {
    isValid: boolean;
-   onClose: () => void
+   onClose: () => void;
 }
-export const EmailModal = ({isValid, onClose}: Props) => {
+export const EmailModal = ({ isValid, onClose }: Props) => {
 
-   return(
-      <div className="email-modal-container">
+   return (
+      <div className={`email-modal-container`}>
          <div className={`email-modal ${isValid ? '' : 'email-modal-false'}`}>
             <h1 className={isValid ? 'modalValidTitle' : 'modalInvalidTitle'}>
                {isValid ? 'Inscrição confirmada!' : 'Erro ao enviar.'}

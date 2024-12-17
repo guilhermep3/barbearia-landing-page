@@ -24,6 +24,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Righteous", sans-serif;
+  overflow-x: hidden;
 }
 
 .header{
@@ -51,7 +52,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 60px;
-  margin-right: 80px;
 }
 .header-middle{
   display: flex;
@@ -198,8 +198,6 @@ section{
   border-radius: 50%;
   border: 5px solid var(--main-color);
   box-shadow: 10px 5px 20px #0c213d;
-  transform: translateX(500px) rotate(90deg);
-  opacity: 0;
 }
 .about-section-text .line{
   margin: 40px 0;
@@ -344,7 +342,6 @@ section{
   justify-content: space-around;
   flex-direction: column;
   gap: 36px;
-  width: 250px;
   height: 100%;
   padding: 100px 30px;
 }
@@ -477,7 +474,7 @@ section{
   display: flex;
   justify-content: center;
   align-items: end;
-  padding: 20px;
+  padding: 15px;
 }
 .barber-medias{
   display: flex;
@@ -604,7 +601,7 @@ footer{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 60px 40px;
+  padding: 40px 40px 20px 40px;
 }
 footer h2{
   font-size: 16px;
@@ -662,6 +659,7 @@ footer h2{
   flex-direction: column;
   z-index: 100;
   background-color: #0a0a0aaa;
+  transition: all 0.5s ease;
 }
 .email-modal{
   display: flex;
@@ -821,7 +819,7 @@ footer h2{
     border-bottom-right-radius: 0;
   }
   footer{
-    padding: 30px;
+    padding: 30px 30px 15px 30px;
   }
   .footer-container{
     display: grid;

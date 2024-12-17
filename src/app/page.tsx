@@ -18,8 +18,14 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Righteous } from 'next/font/google';
+import { ScrollReveal } from "@/components/ScrollReveal";
+import Head from "next/head";
+
+const righteous = Righteous({
+  weight: '400',
+  subsets: ['latin']
+})
 
 export default function Home() {
   const [isMobileNav, setIsMobileNav] = useState(false);
@@ -55,25 +61,14 @@ export default function Home() {
     setEmail('');
   }
 
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to('#about-img', {
-      x: 0,
-      opacity: 1,
-      rotate: '0deg'
-    })
-    return () => {
-      gsap.killTweensOf('#about-img')
-    }
-  },[])
-
   return (
-    <div className="text-white">
-      <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"></link>
+    <div className={`text-white ${righteous.className}`}>
+      <Head>
+        <title>Classic Barber</title>
+        <link rel="icon" href="/barber/barbershop-logo-removebg.png" />
+      </Head>
       <main>
         <header className={`header`}>
-          <img src="/barber/barbershop-logo-removebg.png" alt="logo da classic barber"
-            className="logo" />
           <nav className="header-nav">
             <ul className="header-list">
               <li><a href="#home"
@@ -83,10 +78,8 @@ export default function Home() {
               <li><a href="#services"
                 className="linksHeader">Services</a></li>
             </ul>
-            <div className="header-middle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" viewBox="0 0 24 24"><path fill="#b18d50" d="M21 12c-2 0-3-3-6-3s-3 2-3 2s0-2-3-2s-4 3-6 3c-1 0-2-1-2-1s1 5 5 5c5 0 6-3 6-3s1 3 6 3c4 0 5-5 5-5s-1 1-2 1" /></svg>
-              <span className="header-middle-span">Classic Barber</span>
-            </div>
+            <img src="/barber/barbershop-logo-removebg.png" alt="logo da classic barber"
+            className="logo" />
             <ul className="header-list">
               <li><a href="#kids"
                 className="linksHeader">Kids</a></li>
@@ -105,37 +98,49 @@ export default function Home() {
         </header>
         <MobileNav isMobileNav={isMobileNav} handleMenuMobileClick={handleMenuMobileClick} />
         <section className="hero-section" id="home">
-          <p className="local-hero">São Paulo - Brasil</p>
-          <h1 className="hero-h1">Seja seu própio estilo</h1>
-          <h2 className="hero-h2">Barbearia estilo clássico feito para você ter a melhor experiência e estilo.
-            <br />
-            Entre em contato conosco para agendar um horário.</h2>
-          <Button label="AGENDAR" scrollTo="contact" />
+          <ScrollReveal XorY="Y" minusplus="+" transition="0.5s">
+            <p className="local-hero">São Paulo - Brasil</p>
+            <h1 className="hero-h1">Seja seu própio estilo</h1>
+          </ScrollReveal>
+          <ScrollReveal XorY="Y" minusplus="-" transition="0.5s">
+            <h2 className="hero-h2">Barbearia estilo clássico feito para você ter a melhor experiência e estilo.
+              <br />
+              Entre em contato conosco para agendar um horário.</h2>
+            <Button label="AGENDAR" scrollTo="contact" />
+          </ScrollReveal>
         </section>
         <section className="about-section" id="about">
           <div className="about-section-top">
             <div className="about-section-text">
-              <h2 className="about-section-h2">
-                Nós temos <span className="yearsExp">15 anos</span> de <span className="experience">Experiência</span>
-              </h2>
+              <ScrollReveal transition="0.7s" XorY="x" minusplus="-">
+                <h2 className="about-section-h2">
+                  Nós temos <span className="yearsExp">15 anos</span> de <span className="experience">Experiência</span>
+                </h2>
+              </ScrollReveal>
               <p className="about-text">Barbeiros especializados em cortes de cabelo, barba, hidratação. Apaixonados em transformar o visual dos clientes ampliando a auto-estima do homem.</p>
               <p className="about-text">A Classic Barber é o melhor lugar para um corte de cabelo em estilo. A atenção aos detalhes e o serviço de primeira classe fazem toda a diferença.</p>
               <span className="line"></span>
               <div className="hours-container">
                 <span>Horários</span>
                 <div className="hours-area">
-                  <div>
-                    <p className="hours-week">Seg a Sex</p>
-                    <p>09:00 - 22:00</p>
-                  </div>
-                  <div>
-                    <p className="hours-week">Sáb</p>
-                    <p>10:00 - 21:00</p>
-                  </div>
-                  <div>
-                    <p className="hours-week">Dom</p>
-                    <p>13:00 - 20:00</p>
-                  </div>
+                  <ScrollReveal XorY="Y" minusplus="-" transition="0.7s">
+                    <div>
+                      <p className="hours-week">Seg a Sex</p>
+                      <p>09:00 - 22:00</p>
+                    </div>
+                  </ScrollReveal>
+                  <ScrollReveal XorY="Y" minusplus="-" transition="0.9s">
+                    <div>
+                      <p className="hours-week">Sáb</p>
+                      <p>10:00 - 21:00</p>
+                    </div>
+                  </ScrollReveal>
+                  <ScrollReveal  XorY="Y" minusplus="-" transition="1.1s">
+                    <div>
+                      <p className="hours-week">Dom</p>
+                      <p>13:00 - 20:00</p>
+                    </div>
+                  </ScrollReveal>
                 </div>
               </div>
             </div>
@@ -148,30 +153,38 @@ export default function Home() {
             <h3>nossos clientes</h3>
           </div>
           <div className="skill-area">
-            <div className="skill">
-              <GiBeard className="skill-icon" />
-              <p className="skill-title">Corte de Barba</p>
-              <p className="skill-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur quod magni.</p>
-              <p className="skill-price">R$<span>30</span>,00</p>
-            </div>
-            <div className="skill">
-              <TbCut className="skill-icon" />
-              <p className="skill-title">Corte de cabelo</p>
-              <p className="skill-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur quod magni.</p>
-              <p className="skill-price">R$<span>40</span>,00</p>
-            </div>
-            <div className="skill">
-              <FaSoap className="skill-icon" />
-              <p className="skill-title">Hidratação Capilar</p>
-              <p className="skill-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur quod magni.</p>
-              <p className="skill-price">R$<span>50</span>,00</p>
-            </div>
-            <div className="skill">
-              <MdFaceRetouchingNatural className="skill-icon" />
-              <p className="skill-title">Skin Care</p>
-              <p className="skill-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur quod magni.</p>
-              <p className="skill-price">R$<span>35</span>,00</p>
-            </div>
+            <ScrollReveal XorY="Y" minusplus="-" transition="0.5s">
+              <div className="skill">
+                <GiBeard className="skill-icon" />
+                <p className="skill-title">Corte de Barba</p>
+                <p className="skill-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur quod magni.</p>
+                <p className="skill-price">R$<span>30</span>,00</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal XorY="Y" minusplus="-" transition="0.7s">
+              <div className="skill">
+                <TbCut className="skill-icon" />
+                <p className="skill-title">Corte de cabelo</p>
+                <p className="skill-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur quod magni.</p>
+                <p className="skill-price">R$<span>40</span>,00</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal XorY="Y" minusplus="-" transition="0.9s">
+              <div className="skill">
+                <FaSoap className="skill-icon" />
+                <p className="skill-title">Hidratação Capilar</p>
+                <p className="skill-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur quod magni.</p>
+                <p className="skill-price">R$<span>50</span>,00</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal XorY="Y" minusplus="-" transition="1.1s">
+              <div className="skill">
+                <MdFaceRetouchingNatural className="skill-icon" />
+                <p className="skill-title">Skin Care</p>
+                <p className="skill-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur quod magni.</p>
+                <p className="skill-price">R$<span>35</span>,00</p>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
         <section className="kids-section" id="kids">
@@ -194,24 +207,28 @@ export default function Home() {
             </div>
           </div>
           <div className="kids-area">
-            <div className="kids-text-area">
-              <div className="kids-title">
-                <h2>Espaço infantil</h2>
-                <span>especializado</span>
+            <ScrollReveal XorY="X" minusplus="+" transition="0.5s">
+              <div className="kids-text-area">
+                <div className="kids-title">
+                  <h2>Espaço infantil</h2>
+                  <span>especializado</span>
+                </div>
+                <p className="kids-text">Na nossa barbearia, pensamos em toda a família, e é por isso que possuímos uma área infantil especialmente projetada
+                  para tornar a experiência dos pequenos mais agradável e divertida. Enquanto aguardam pelo atendimento, as crianças podem se divertir em um espaço seguro e acolhedor,
+                  repleto de brinquedos e atividades que estimulam a criatividade e o entretenimento.
+                </p>
+                <p className="kids-text">Estamos comprometidos em proporcionar um serviço de alta qualidade para todos os nossos clientes, independentemente da idade.
+                  Nossa dedicação aos detalhes e ao conforto de cada cliente faz da nossa barbearia o lugar ideal para toda a família.
+                </p>
               </div>
-              <p className="kids-text">Na nossa barbearia, pensamos em toda a família, e é por isso que possuímos uma área infantil especialmente projetada
-                para tornar a experiência dos pequenos mais agradável e divertida. Enquanto aguardam pelo atendimento, as crianças podem se divertir em um espaço seguro e acolhedor,
-                repleto de brinquedos e atividades que estimulam a criatividade e o entretenimento.
-              </p>
-              <p className="kids-text">Estamos comprometidos em proporcionar um serviço de alta qualidade para todos os nossos clientes, independentemente da idade.
-                Nossa dedicação aos detalhes e ao conforto de cada cliente faz da nossa barbearia o lugar ideal para toda a família.
-              </p>
-            </div>
-            <div className="kids-image-area">
-              <img src="/barber/kids-section.jpg" alt="criança cortando cabelo" />
-              <div className="bg-img">
-                <img src="/barber/barbershop-logo-removebg.png" alt="" />Classic barber</div>
-            </div>
+            </ScrollReveal>
+            <ScrollReveal XorY="X" minusplus="-" transition="0.5s">
+              <div className="kids-image-area">
+                <img src="/barber/kids-section.jpg" alt="criança cortando cabelo" />
+                <div className="bg-img">
+                  <img src="/barber/barbershop-logo-removebg.png" alt="" />Classic barber</div>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
         <section className="barbers-section" id="barbers">
