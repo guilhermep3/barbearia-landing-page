@@ -227,67 +227,74 @@ export default function Home() {
           </div>
         </section>
         <footer>
-          <div className="footer-div">
-            <h2>Links</h2>
-            <ul className="link-list">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#kids">Kids</a></li>
-              <li><a href="#barbers">Barbers</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div className="footer-div">
-            <h2>Horários</h2>
-            <div className="horary-footer-area">
-              <div className="horary-footer">
-                <p>Seg a Sex</p>
-                <span>09:00 - 22:00</span>
+          <div className="footer-container">
+            <div className="footer-div">
+              <h2>Links</h2>
+              <ul className="link-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#kids">Kids</a></li>
+                <li><a href="#barbers">Barbers</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div className="footer-div">
+              <h2>Horários</h2>
+              <div className="horary-footer-area">
+                <div className="horary-footer">
+                  <p>Seg a Sex</p>
+                  <span>09:00 - 22:00</span>
+                </div>
+                <div className="horary-footer">
+                  <p>Sáb</p>
+                  <span>10:00 - 21:00</span>
+                </div>
+                <div className="horary-footer">
+                  <p>Dom</p>
+                  <span>13:00 - 20:00</span>
+                </div>
               </div>
-              <div className="horary-footer">
-                <p>Sáb</p>
-                <span>10:00 - 21:00</span>
+            </div>
+            <div className="footer-div">
+              <h2>Redes Sociais</h2>
+              <div className="social-media">
+                <FaFacebookF className="footer-icon"/>
+                <p>@classicbarber</p>
               </div>
-              <div className="horary-footer">
-                <p>Dom</p>
-                <span>13:00 - 20:00</span>
+              <div className="social-media">
+                <FaInstagram className="footer-icon"/>
+                <p>@classicbarber</p>
+              </div>
+              <div className="social-media">
+                <FaTwitter className="footer-icon"/>
+                <p>@classicbarber</p>
+              </div>
+              <div className="social-media">
+                <FaTiktok className="footer-icon"/>
+                <p>@classicbarber</p>
+              </div>
+            </div>
+            <div className="footer-div">
+              <h2>Contatos</h2>
+              <div className="contact">
+                <BsFillTelephoneFill className="footer-icon" />
+                <p>+ 55 987 654 321</p>
+              </div>
+              <div className="contact">
+                <MdEmail className="footer-icon" />
+                <p>companyemail@gmail.com</p>
+              </div>
+              <div className="contact">
+                <FaHouse className="footer-icon" />
+                <p>123 Vila Mariana,<br /> São Paulo, Brasil</p>
               </div>
             </div>
           </div>
-          <div className="footer-div">
-            <h2>Redes Sociais</h2>
-            <div className="social-media">
-              <FaFacebookF className="footer-icon"/>
-              <p>@classicbarber</p>
-            </div>
-            <div className="social-media">
-              <FaInstagram className="footer-icon"/>
-              <p>@classicbarber</p>
-            </div>
-            <div className="social-media">
-              <FaTwitter className="footer-icon"/>
-              <p>@classicbarber</p>
-            </div>
-            <div className="social-media">
-              <FaTiktok className="footer-icon"/>
-              <p>@classicbarber</p>
-            </div>
-          </div>
-          <div className="footer-div">
-            <h2>Contatos</h2>
-            <div className="contact">
-              <BsFillTelephoneFill className="footer-icon" />
-              <p>+ 55 987 654 321</p>
-            </div>
-            <div className="contact">
-              <MdEmail className="footer-icon" />
-              <p>companyemail@gmail.com</p>
-            </div>
-            <div className="contact">
-              <FaHouse className="footer-icon" />
-              <p>123 Vila Mariana,<br /> São Paulo, Brasil</p>
-            </div>
+          <div className="footer-copyright">
+            <p>© copyright -
+              <a href="https://github.com/guilhermep3" target="_blank"> Created by Guilherme Pereira</a>
+            </p>
           </div>
         </footer>
       </main>
