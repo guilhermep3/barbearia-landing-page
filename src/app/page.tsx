@@ -1,7 +1,7 @@
 "use client"
 import { Button } from "@/components/button";
 import { MobileNav } from "@/components/mobileNav";
-import { FormEvent, useState } from "react";
+import { FormEvent, useLayoutEffect, useState } from "react";
 import { TbCut } from "react-icons/tb";
 import { MdFaceRetouchingNatural } from "react-icons/md";
 import { GiBeard } from "react-icons/gi";
@@ -18,6 +18,8 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Home() {
   const [isMobileNav, setIsMobileNav] = useState(false);
@@ -52,6 +54,18 @@ export default function Home() {
     setModalProps(null);
     setEmail('');
   }
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to('#about-img', {
+      x: 0,
+      opacity: 1,
+      rotate: '0deg'
+    })
+    return () => {
+      gsap.killTweensOf('#about-img')
+    }
+  },[])
 
   return (
     <div className="text-white">
@@ -125,7 +139,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <img src="/barber/barber-smiling.jpg" alt="imagem section 1" />
+            <img src="/barber/barber-smiling.jpg" id="about-img" alt="imagem section 1" />
           </div>
         </section>
         <section className="services-section" id="services">

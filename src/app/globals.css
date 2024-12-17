@@ -198,6 +198,8 @@ section{
   border-radius: 50%;
   border: 5px solid var(--main-color);
   box-shadow: 10px 5px 20px #0c213d;
+  transform: translateX(500px) rotate(90deg);
+  opacity: 0;
 }
 .about-section-text .line{
   margin: 40px 0;
