@@ -19,12 +19,13 @@
 html{
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Righteous", sans-serif;
-  overflow-x: hidden;
 }
 
 .header{

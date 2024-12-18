@@ -1,20 +1,18 @@
 "use client"
+import { FormEvent, useState } from "react";
 import { Button } from "@/components/button";
 import { MobileNav } from "@/components/mobileNav";
-import { FormEvent, useLayoutEffect, useState } from "react";
+import { Slider } from "@/components/slider";
+import { EmailModal } from "@/components/EmailModal";
+import { slideData } from "@/data/slideData";
 import { TbCut } from "react-icons/tb";
 import { MdFaceRetouchingNatural } from "react-icons/md";
 import { GiBeard } from "react-icons/gi";
-import { FaSoap } from "react-icons/fa";
-import { slideData } from "@/data/slideData";
-import { Slider } from "@/components/slider";
-import { EmailModal } from "@/components/EmailModal";
-import { GrFormPrevious } from "react-icons/gr";
-import { GrFormNext } from "react-icons/gr";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
+import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 import { FaHouse, FaFacebookF } from "react-icons/fa6";
-import { FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaTiktok, FaSoap } from "react-icons/fa";
 import { Righteous } from 'next/font/google';
 import { ScrollReveal } from "@/components/ScrollReveal";
 
@@ -90,11 +88,11 @@ export default function Home() {
         </header>
         <MobileNav isMobileNav={isMobileNav} handleMenuMobileClick={handleMenuMobileClick} />
         <section className="hero-section" id="home">
-          <ScrollReveal XorY="Y" minusplus="+" transition="0.5s">
+          <ScrollReveal XorY="Y" minusplus="+" transition="0.8s">
             <p className="local-hero">São Paulo - Brasil</p>
             <h1 className="hero-h1">Seja seu própio estilo</h1>
           </ScrollReveal>
-          <ScrollReveal XorY="Y" minusplus="-" transition="0.5s">
+          <ScrollReveal XorY="Y" minusplus="-" transition="0.8s">
             <h2 className="hero-h2">Barbearia estilo clássico feito para você ter a melhor experiência e estilo.
               <br />
               Entre em contato conosco para agendar um horário.</h2>
@@ -104,7 +102,7 @@ export default function Home() {
         <section className="about-section" id="about">
           <div className="about-section-top">
             <div className="about-section-text">
-              <ScrollReveal transition="0.7s" XorY="x" minusplus="-">
+              <ScrollReveal transition="1s" XorY="x" minusplus="-">
                 <h2 className="about-section-h2">
                   Nós temos <span className="yearsExp">15 anos</span> de <span className="experience">Experiência</span>
                 </h2>
@@ -115,19 +113,19 @@ export default function Home() {
               <div className="hours-container">
                 <span>Horários</span>
                 <div className="hours-area">
-                  <ScrollReveal XorY="Y" minusplus="-" transition="0.7s">
+                  <ScrollReveal XorY="Y" minusplus="-" transition="1s">
                     <div>
                       <p className="hours-week">Seg a Sex</p>
                       <p>09:00 - 22:00</p>
                     </div>
                   </ScrollReveal>
-                  <ScrollReveal XorY="Y" minusplus="-" transition="0.9s">
+                  <ScrollReveal XorY="Y" minusplus="-" transition="1.2s">
                     <div>
                       <p className="hours-week">Sáb</p>
                       <p>10:00 - 21:00</p>
                     </div>
                   </ScrollReveal>
-                  <ScrollReveal XorY="Y" minusplus="-" transition="1.1s">
+                  <ScrollReveal XorY="Y" minusplus="-" transition="1.4s">
                     <div>
                       <p className="hours-week">Dom</p>
                       <p>13:00 - 20:00</p>
@@ -145,7 +143,7 @@ export default function Home() {
             <h3>nossos clientes</h3>
           </div>
           <div className="skill-area">
-            <ScrollReveal XorY="Y" minusplus="-" transition="0.5s">
+            <ScrollReveal XorY="Y" minusplus="-" transition="0.8s">
               <div className="skill">
                 <GiBeard className="skill-icon" />
                 <p className="skill-title">Corte de Barba</p>
@@ -153,7 +151,7 @@ export default function Home() {
                 <p className="skill-price">R$<span>30</span>,00</p>
               </div>
             </ScrollReveal>
-            <ScrollReveal XorY="Y" minusplus="-" transition="0.7s">
+            <ScrollReveal XorY="Y" minusplus="-" transition="1s">
               <div className="skill">
                 <TbCut className="skill-icon" />
                 <p className="skill-title">Corte de cabelo</p>
@@ -161,7 +159,7 @@ export default function Home() {
                 <p className="skill-price">R$<span>40</span>,00</p>
               </div>
             </ScrollReveal>
-            <ScrollReveal XorY="Y" minusplus="-" transition="0.9s">
+            <ScrollReveal XorY="Y" minusplus="-" transition="1.2s">
               <div className="skill">
                 <FaSoap className="skill-icon" />
                 <p className="skill-title">Hidratação Capilar</p>
@@ -169,7 +167,7 @@ export default function Home() {
                 <p className="skill-price">R$<span>50</span>,00</p>
               </div>
             </ScrollReveal>
-            <ScrollReveal XorY="Y" minusplus="-" transition="1.1s">
+            <ScrollReveal XorY="Y" minusplus="-" transition="1.4s">
               <div className="skill">
                 <MdFaceRetouchingNatural className="skill-icon" />
                 <p className="skill-title">Skin Care</p>
@@ -199,7 +197,7 @@ export default function Home() {
             </div>
           </div>
           <div className="kids-area">
-            <ScrollReveal XorY="X" minusplus="+" transition="0.5s">
+            <ScrollReveal XorY="X" minusplus="-" transition="0.8s">
               <div className="kids-text-area">
                 <div className="kids-title">
                   <h2>Espaço infantil</h2>
@@ -214,7 +212,7 @@ export default function Home() {
                 </p>
               </div>
             </ScrollReveal>
-            <ScrollReveal XorY="X" minusplus="-" transition="0.5s">
+            <ScrollReveal XorY="X" minusplus="-" transition="0.8s">
               <div className="kids-image-area">
                 <img src="/barber/kids-section.jpg" alt="criança cortando cabelo" />
                 <div className="bg-img">
