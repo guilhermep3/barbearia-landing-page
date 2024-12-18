@@ -8,19 +8,15 @@ import { GiBeard } from "react-icons/gi";
 import { FaSoap } from "react-icons/fa";
 import { slideData } from "@/data/slideData";
 import { Slider } from "@/components/slider";
+import { EmailModal } from "@/components/EmailModal";
 import { GrFormPrevious } from "react-icons/gr";
 import { GrFormNext } from "react-icons/gr";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import { FaHouse } from "react-icons/fa6";
-import { EmailModal } from "@/components/EmailModal";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
+import { FaHouse, FaFacebookF } from "react-icons/fa6";
+import { FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
 import { Righteous } from 'next/font/google';
 import { ScrollReveal } from "@/components/ScrollReveal";
-import Head from "next/head";
 
 const righteous = Righteous({
   weight: '400',
@@ -63,10 +59,6 @@ export default function Home() {
 
   return (
     <div className={`text-white ${righteous.className}`}>
-      <Head>
-        <title>Classic Barber</title>
-        <link rel="icon" href="/barber/barbershop-logo-removebg.png" />
-      </Head>
       <main>
         <header className={`header`}>
           <nav className="header-nav">
@@ -79,7 +71,7 @@ export default function Home() {
                 className="linksHeader">Services</a></li>
             </ul>
             <img src="/barber/barbershop-logo-removebg.png" alt="logo da classic barber"
-            className="logo" />
+              className="logo" />
             <ul className="header-list">
               <li><a href="#kids"
                 className="linksHeader">Kids</a></li>
@@ -135,7 +127,7 @@ export default function Home() {
                       <p>10:00 - 21:00</p>
                     </div>
                   </ScrollReveal>
-                  <ScrollReveal  XorY="Y" minusplus="-" transition="1.1s">
+                  <ScrollReveal XorY="Y" minusplus="-" transition="1.1s">
                     <div>
                       <p className="hours-week">Dom</p>
                       <p>13:00 - 20:00</p>
@@ -290,19 +282,19 @@ export default function Home() {
             <div className="footer-div">
               <h2>Redes Sociais</h2>
               <div className="social-media">
-                <FaFacebookF className="footer-icon"/>
+                <FaFacebookF className="footer-icon" />
                 <p>@classicbarber</p>
               </div>
               <div className="social-media">
-                <FaInstagram className="footer-icon"/>
+                <FaInstagram className="footer-icon" />
                 <p>@classicbarber</p>
               </div>
               <div className="social-media">
-                <FaTwitter className="footer-icon"/>
+                <FaTwitter className="footer-icon" />
                 <p>@classicbarber</p>
               </div>
               <div className="social-media">
-                <FaTiktok className="footer-icon"/>
+                <FaTiktok className="footer-icon" />
                 <p>@classicbarber</p>
               </div>
             </div>
