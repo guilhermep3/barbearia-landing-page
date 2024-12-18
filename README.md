@@ -1,6 +1,12 @@
-# Classic Barber - Landing Page Barbearia
-<p>Projeto de site para apresentar a barbearia com validação de email</p>
-<img src="https://github.com/user-attachments/assets/366636b3-13cf-4509-b598-d694eac98d20">
+# Corte Clássico - Landing Page
+<p>Projeto de landing page de uma barbearia com validação de email.</p>
+<img src="https://github.com/user-attachments/assets/9bab82fe-f362-48a5-89fe-4541cdd853c8">
+
+## Para instalar
+- npm install
+## Para iniciar
+- npm start
+
 <div>
   <h1>Tecnologias utilizadas</h1>
   <img align="center" alt="HTML" height="30" width="40" src="https://www.svgrepo.com/show/493719/react-javascript-js-framework-facebook.svg">

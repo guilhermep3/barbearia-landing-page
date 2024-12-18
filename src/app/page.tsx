@@ -64,21 +64,21 @@ export default function Home() {
           <nav className="header-nav">
             <ul className="header-list">
               <li><a href="#home"
-                className="linksHeader">Home</a></li>
+                className="linksHeader">Início</a></li>
               <li><a href="#about"
-                className="linksHeader">About</a></li>
+                className="linksHeader">Sobre</a></li>
               <li><a href="#services"
-                className="linksHeader">Services</a></li>
+                className="linksHeader">Serviços</a></li>
             </ul>
-            <img src="/barber/barbershop-logo-removebg.png" alt="logo da classic barber"
+            <img src="/barber/barbershop-logo-removebg.png" alt="logo da Corte Clássico"
               className="logo" />
             <ul className="header-list">
               <li><a href="#kids"
-                className="linksHeader">Kids</a></li>
+                className="linksHeader">Infantil</a></li>
               <li><a href="#barbers"
-                className="linksHeader">Barbers</a></li>
+                className="linksHeader">Barbeiros</a></li>
               <li><a href="#contact"
-                className="linksHeader">Contact</a></li>
+                className="linksHeader">Contato</a></li>
             </ul>
           </nav>
           <div className={`mobile-burger ${isMobileNav ? 'burger-active' : ''}`}
@@ -110,7 +110,7 @@ export default function Home() {
                 </h2>
               </ScrollReveal>
               <p className="about-text">Barbeiros especializados em cortes de cabelo, barba, hidratação. Apaixonados em transformar o visual dos clientes ampliando a auto-estima do homem.</p>
-              <p className="about-text">A Classic Barber é o melhor lugar para um corte de cabelo em estilo. A atenção aos detalhes e o serviço de primeira classe fazem toda a diferença.</p>
+              <p className="about-text">A Corte Clássico é o melhor lugar para um corte de cabelo em estilo. A atenção aos detalhes e o serviço de primeira classe fazem toda a diferença.</p>
               <span className="line"></span>
               <div className="hours-container">
                 <span>Horários</span>
@@ -218,7 +218,7 @@ export default function Home() {
               <div className="kids-image-area">
                 <img src="/barber/kids-section.jpg" alt="criança cortando cabelo" />
                 <div className="bg-img">
-                  <img src="/barber/barbershop-logo-removebg.png" alt="" />Classic barber</div>
+                  <img src="/barber/barbershop-logo-removebg.png" alt="" />Corte Clássico</div>
               </div>
             </ScrollReveal>
           </div>
@@ -234,7 +234,7 @@ export default function Home() {
           </div>
         </section>
         <section className="subscribe-section" id="contact">
-          <img src="/barber/barbershop-logo-removebg.png" alt="logo da classic barber" />
+          <img src="/barber/barbershop-logo-removebg.png" alt="logo da Corte Clássico" />
           <div className="subscribe-area">
             <h2>Inscreva-se na nossa Newsletter</h2>
             <h3>Tenha <span>10%</span> de desconto</h3>
@@ -254,12 +254,12 @@ export default function Home() {
             <div className="footer-div">
               <h2>Links</h2>
               <ul className="link-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#kids">Kids</a></li>
-                <li><a href="#barbers">Barbers</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#kids">Infantil</a></li>
+                <li><a href="#barbers">Barbeiros</a></li>
+                <li><a href="#contact">Contato</a></li>
               </ul>
             </div>
             <div className="footer-div">
@@ -283,19 +283,19 @@ export default function Home() {
               <h2>Redes Sociais</h2>
               <div className="social-media">
                 <FaFacebookF className="footer-icon" />
-                <p>@classicbarber</p>
+                <p>@corteclassico</p>
               </div>
               <div className="social-media">
                 <FaInstagram className="footer-icon" />
-                <p>@classicbarber</p>
+                <p>@corteclassico</p>
               </div>
               <div className="social-media">
                 <FaTwitter className="footer-icon" />
-                <p>@classicbarber</p>
+                <p>@corteclassico</p>
               </div>
               <div className="social-media">
                 <FaTiktok className="footer-icon" />
-                <p>@classicbarber</p>
+                <p>@corteclassico</p>
               </div>
             </div>
             <div className="footer-div">
