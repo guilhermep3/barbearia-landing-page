@@ -147,7 +147,7 @@ export default function Home() {
               <div className="skill">
                 <GiBeard className="skill-icon" />
                 <p className="skill-title">Corte de Barba</p>
-                <p className="skill-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur quod magni.</p>
+                <p className="skill-text">Cortes baseados no estilo do século 20 que garantem elegância para você.</p>
                 <p className="skill-price">R$<span>30</span>,00</p>
               </div>
             </ScrollReveal>
@@ -155,7 +155,7 @@ export default function Home() {
               <div className="skill">
                 <TbCut className="skill-icon" />
                 <p className="skill-title">Corte de cabelo</p>
-                <p className="skill-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur quod magni.</p>
+                <p className="skill-text">Cortes baseados no estilo do século 20 que garantem elegância para você.</p>
                 <p className="skill-price">R$<span>40</span>,00</p>
               </div>
             </ScrollReveal>
@@ -163,7 +163,7 @@ export default function Home() {
               <div className="skill">
                 <FaSoap className="skill-icon" />
                 <p className="skill-title">Hidratação Capilar</p>
-                <p className="skill-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur quod magni.</p>
+                <p className="skill-text">A hidratação essêncial para seu cabelo estar saudável e bonito.</p>
                 <p className="skill-price">R$<span>50</span>,00</p>
               </div>
             </ScrollReveal>
@@ -171,7 +171,7 @@ export default function Home() {
               <div className="skill">
                 <MdFaceRetouchingNatural className="skill-icon" />
                 <p className="skill-title">Skin Care</p>
-                <p className="skill-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate pariatur quod magni.</p>
+                <p className="skill-text">Fundamental para homens que querem passar uma imagem madura.</p>
                 <p className="skill-price">R$<span>35</span>,00</p>
               </div>
             </ScrollReveal>
@@ -314,7 +314,7 @@ export default function Home() {
           </div>
           <div className="footer-copyright">
             <p>© copyright -
-              <a href="https://github.com/guilhermep3" target="_blank"> Created by Guilherme Pereira</a>
+              <a href="https://github.com/guilhermep3" target="_blank"> Developed by Guilherme Pereira</a>
             </p>
           </div>
         </footer>

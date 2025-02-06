@@ -752,7 +752,7 @@ footer h2{
     background-attachment: scroll;
   }
   .kids-section{
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .kids-section-aside{
     flex-direction: row;
